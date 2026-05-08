@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safety Dashboard</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="dashboard-container">
+
+        <h1>📊 Public Safety Dashboard</h1>
+
+        <div class="cards">
+
+            <div class="card">
+                <h2>Missing Cases</h2>
+                <p>19</p>
+            </div>
+
+            <div class="card">
+                <h2>Accidents</h2>
+                <p>12</p>
+            </div>
+
+            <div class="card">
+                <h2>Violence Reports</h2>
+                <p>7</p>
+            </div>
+
+        </div>
+
+        <div class="chart-container">
+            <canvas id="myChart"></canvas>
+        </div>
+
+    </div>
+
+    <script>
+
+        const ctx = document.getElementById('myChart');
+
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Missing', 'Accidents', 'Violence'],
+                datasets: [{
+                    label: 'Cases',
+                    data: [19, 12, 7]
+                }]
+            }
+        });
+
+    </script>
+
+</body>
+</html>

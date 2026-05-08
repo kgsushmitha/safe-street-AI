@@ -1,0 +1,138 @@
+/* style.css */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+}
+
+/* Header */
+
+header{
+    background:#d90429;
+    color:white;
+    text-align:center;
+    padding:20px;
+    font-size:28px;
+    font-weight:bold;
+    letter-spacing:1px;
+}
+
+/* Main Container */
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:30px auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:25px;
+}
+
+/* Cards */
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card h2{
+    margin-bottom:20px;
+    color:#d90429;
+}
+
+/* SOS Button */
+
+.sos-btn{
+    width:100%;
+    padding:18px;
+    background:#ef233c;
+    color:white;
+    border:none;
+    border-radius:10px;
+    font-size:22px;
+    cursor:pointer;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.sos-btn:hover{
+    background:#c1121f;
+}
+
+/* Emergency Services */
+
+.service{
+    background:#edf2f4;
+    padding:15px;
+    border-radius:8px;
+    margin-bottom:12px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.service button{
+    background:#2b2d42;
+    color:white;
+    border:none;
+    padding:8px 14px;
+    border-radius:6px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.service button:hover{
+    background:#1d3557;
+}
+
+/* Notifications */
+
+.notification{
+    background:#fff3cd;
+    border-left:5px solid #ffb703;
+    padding:15px;
+    margin-bottom:15px;
+    border-radius:8px;
+}
+
+.notification h4{
+    margin-bottom:6px;
+    color:#b45309;
+}
+
+/* Footer */
+
+footer{
+    margin-top:40px;
+    background:#2b2d42;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+
+/* Responsive */
+
+@media(max-width:600px){
+
+    header{
+        font-size:22px;
+    }
+
+    .sos-btn{
+        font-size:18px;
+    }
+
+}

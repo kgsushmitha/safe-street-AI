@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SOS Emergency Services</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#f4f6f9;
+    }
+
+    header{
+      background:#d90429;
+      color:white;
+      padding:20px;
+      text-align:center;
+      font-size:28px;
+      font-weight:bold;
+    }
+
+    .container{
+      width:90%;
+      max-width:1200px;
+      margin:30px auto;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      gap:25px;
+    }
+
+    .card{
+      background:white;
+      padding:25px;
+      border-radius:12px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .card h2{
+      margin-bottom:20px;
+      color:#d90429;
+    }
+
+    .sos-btn{
+      width:100%;
+      padding:18px;
+      background:#ef233c;
+      color:white;
+      border:none;
+      border-radius:10px;
+      font-size:22px;
+      cursor:pointer;
+      font-weight:bold;
+    }
+
+    .sos-btn:hover{
+      background:#c1121f;
+    }
+
+    .service{
+      background:#edf2f4;
+      padding:15px;
+      border-radius:8px;
+      margin-bottom:12px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    .service button{
+      background:#2b2d42;
+      color:white;
+      border:none;
+      padding:8px 14px;
+      border-radius:6px;
+      cursor:pointer;
+    }
+
+    .notification{
+      background:#fff3cd;
+      border-left:5px solid #ffb703;
+      padding:15px;
+      margin-bottom:15px;
+      border-radius:8px;
+    }
+
+    footer{
+      margin-top:40px;
+      background:#2b2d42;
+      color:white;
+      text-align:center;
+      padding:15px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  SOS Emergency & Disaster Management System
+</header>
+
+<div class="container">
+
+  <!-- SOS -->
+  <div class="card">
+    <h2>Emergency SOS</h2>
+
+    <button class="sos-btn" onclick="sendSOS()">
+      🚨 SEND SOS
+    </button>
+  </div>
+
+  <!-- Emergency Services -->
+  <div class="card">
+    <h2>Emergency Services</h2>
+
+    <div class="service">
+      <span>🚑 Ambulance</span>
+      <button onclick="notifyService('Ambulance')">Notify</button>
+    </div>
+
+    <div class="service">
+      <span>🚓 Police</span>
+      <button onclick="notifyService('Police')">Notify</button>
+    </div>
+
+    <div class="service">
+      <span>🚒 Fire Rescue</span>
+      <button onclick="notifyService('Fire Rescue')">Notify</button>
+    </div>
+
+    <div class="service">
+      <span>🏥 Hospital</span>
+      <button onclick="notifyService('Hospital')">Notify</button>
+    </div>
+  </div>
+
+  <!-- Disaster Alerts -->
+  <div class="card">
+    <h2>Disaster Notifications</h2>
+
+    <div class="notification">
+      <h4>⚠ Flood Alert</h4>
+      Heavy rainfall expected in low-lying areas.
+    </div>
+
+    <div class="notification">
+      <h4>🌪 Cyclone Warning</h4>
+      Cyclone moving toward coastal regions.
+    </div>
+
+    <div class="notification">
+      <h4>🔥 Wildfire Alert</h4>
+      High wildfire risk due to extreme heat.
+    </div>
+
+  </div>
+
+</div>
+
+<footer>
+  Frontend Project - SOS Emergency Services
+</footer>
+
+<script>
+
+  function sendSOS(){
+    alert("SOS Alert Sent Successfully!");
+  }
+
+  function notifyService(service){
+    alert(service + " Notified!");
+  }
+
+</script>
+
+</body>
+</html>
